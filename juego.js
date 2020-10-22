@@ -13,6 +13,7 @@ class Jugador{
     }
     avanzar(numero){
         this.avance = numero + this.posicion
+        return this.avance; 
     }
 }
 class Tablero{
@@ -58,6 +59,8 @@ class Tablero{
             return 22;
         case 17:
             return 9;
+        default: 
+        return numero
         }
     }
 }
@@ -67,5 +70,13 @@ let p1 = new Jugador("Luis");
 let p2 = new Jugador("Alan");
 
 while (p1.posicion <= 100 && p2.posicion <=100){
-    p1.posicion|
+    p1.posicion = mesa.casillas(p1.avanzar(dado.tirar()));
+    p2.posicion = mesa.casillas(p2.avanzar(dado.tirar()));
+    console.log(`${p1.nombre} se encuentra en la posicion: ${p1.posicion},
+     ${p2.nombre} se encuentra en la posicion: ${p2.posicion}`)
+}
+if(p1.posicion >= 100){
+    console.log(`Jugador 1: ${p1.nombre}. !Ah GANADO¡`)
+}else if (p2.posicion >= 100){
+    console.log(`Jugador 2: ${p2.nombre}. !Ah GANADO¡`)
 }
