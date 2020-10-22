@@ -61,3 +61,11 @@ class Tablero{
         }
     }
 }
+let dado = new Dado();
+let mesa = new Tablero();
+let p1 = new Jugador("Luis");
+let p2 = new Jugador("Alan");
+
+while (p1.posicion <= 100 && p2.posicion <=100){
+    p1.posicion|
+}
